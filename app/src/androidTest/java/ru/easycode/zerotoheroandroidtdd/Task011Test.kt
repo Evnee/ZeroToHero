@@ -38,8 +38,8 @@ class Task011Test {
                 withId(R.id.countTextView),
                 withText("0"),
                 withParent(isAssignableFrom(LinearLayout::class.java)),
-                withParent(withId(R.id.rootLayout))
-            )
+                withParent(withId(R.id.rootLayout)),
+            ),
         ).check(matches(isDisplayed()))
 
         onView(
@@ -48,8 +48,8 @@ class Task011Test {
                 withText("increment"),
                 isAssignableFrom(Button::class.java),
                 withParent(isAssignableFrom(LinearLayout::class.java)),
-                withParent(withId(R.id.rootLayout))
-            )
+                withParent(withId(R.id.rootLayout)),
+            ),
         ).check(isCompletelyRightOf(withId(R.id.countTextView)))
 
         onView(withId(R.id.incrementButton)).perform(click())
