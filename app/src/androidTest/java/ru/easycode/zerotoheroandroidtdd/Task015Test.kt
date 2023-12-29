@@ -39,7 +39,7 @@ class Task015Test {
         onView(
             allOf(
                 withParent(isAssignableFrom(LinearLayout::class.java)),
-                withParent(withId(R.id.rootLayout)),
+                    withParent(withId(R.id.rootLayout)),
                 isAssignableFrom(ProgressBar::class.java),
                 withId(R.id.progressBar)
             )
